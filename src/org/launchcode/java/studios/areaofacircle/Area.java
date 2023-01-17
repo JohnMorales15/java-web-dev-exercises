@@ -10,15 +10,11 @@ public class Area {
         Scanner input = new Scanner(System.in);
         Double r = input.nextDouble();
 //        double area = (3.14 * r * r);
-//        if (r < 0) {
-//            System.err.println("Radius cannot be a negative number!");
-//        } else if (r.equals("")) {
-//            System.err.println("Radius cannot be empty!");
-//        } else {
-//        } else if (r.isNaN()){
-//            System.err.println("Radius is not a Number!");
-//        };
-            System.out.println("The area of a circle with a radius " + r + " is: " + Circle.getArea(r));
-//        }
+        while (r < 0){
+            System.out.println("Radius cannot be less than 0!");
+            r = input.nextDouble();
+        }
+        System.out.println("The area of a circle with a radius "+ r + " is: " + Circle.getArea(r));
     }
 }
+
